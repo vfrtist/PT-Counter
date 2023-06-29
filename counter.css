@@ -33,11 +33,11 @@ body {
     border-radius: 25%;
     user-select: none;
     z-index: 1;
+}
 
-    &:active {
+.container:active {
         transform: translatey(3px);
     }
-}
 
 .count {
     margin: 0;
@@ -105,9 +105,9 @@ button {
     color: white;
     font-size: 18px;
     box-shadow: 0px 6px 18px #7c8e913b;
+}
 
-    &:active {
+button:active {
         background: #2760fd;
         transform: translateY(2px);
     }
-}
