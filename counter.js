@@ -27,7 +27,7 @@ function setTo0() {
 }
 
 const blink = [
-    { transform: 'scaleX(1)', color: 'black' },
-    { transform: 'scaleX(0)', color: '#f7fbff;' },
-    { transform: 'scaleX(1)', color: 'black' },
+    { transform: 'scaleX(1)' },
+    { transform: 'scaleX(0)' },
+    { transform: 'scaleX(1)' },
 ]
