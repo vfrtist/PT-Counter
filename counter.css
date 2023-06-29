@@ -37,7 +37,7 @@ body {
 
 .container:active {
         transform: translatey(3px);
-    }
+}
 
 .count {
     margin: 0;
@@ -110,4 +110,4 @@ button {
 button:active {
         background: #2760fd;
         transform: translateY(2px);
-    }
+}
