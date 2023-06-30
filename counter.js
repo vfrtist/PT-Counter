@@ -5,7 +5,7 @@ const set = document.querySelector('.set').firstElementChild
 
 counter.addEventListener('click', () => {
     counter.firstElementChild.innerText++
-    counter.firstElementChild.animate(bounce, { duration: 150, iterations: 1, }
+    counter.firstElementChild.animate(bounce, { duration: 150, iterations: 1, })
     if (counter.firstElementChild.innerText === '1') {
         counter.lastElementChild.classList.add('hidden');
     }
