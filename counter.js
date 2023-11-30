@@ -5,7 +5,7 @@ const set = document.querySelector('.set').firstElementChild
 const fireworks = document.querySelectorAll('.firework')
 const textline = counter.querySelector('h2')
 const header = document.querySelector('header')
-const affirmations = ['Great Job!', 'Keep It Up!', 'Good Work!', 'Almost There!', 'Incredible!', 'Get It!', 'Nice!', 'Oh Yeah!', 'Right On!', 'Amazing!', 'Stupendous!']
+const affirmations = ['Great Job!', 'Keep It Up!', 'Good Work!', 'Almost There!', 'Incredible!', 'Get It!', 'Nice!', 'Oh Yeah!', 'Right On!', 'Amazing!', 'Stupendous!', 'Legendary!', 'That\'s The Stuff!', 'You\'re Slaying It!', 'No Ordinary Fella!']
 
 function selectAffirmation() {
     return affirmations[Math.floor(Math.random() * affirmations.length)];
