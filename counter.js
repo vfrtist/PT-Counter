@@ -17,12 +17,14 @@ counter.addEventListener('click', () => {
     if (counter.firstElementChild.innerText === '1') {
         textline.classList.add('hidden');
     }
+    completeExercise.disabled = false;
 })
 
 endSet.addEventListener('click', () => {
     set.innerText++;
     setTo0();
     set.parentElement.animate(blink, { duration: 200, iterations: 1, });
+    completeExercise.disabled = false;
 })
 
 completeExercise.addEventListener('click', () => {
@@ -30,13 +32,13 @@ completeExercise.addEventListener('click', () => {
     setTo0();
     header.firstElementChild.innerText = selectAffirmation()
     header.classList.add('out');
+    completeExercise.disabled = true;
 })
 
 header.addEventListener('transitionend', () => {
     if (header.classList.contains('out')) {
         header.classList.remove('out');
     }
-    if (header.classList.contains('pause')) { header.classList.remove('pause') };
 })
 
 function setTo0() {
@@ -53,10 +55,4 @@ const blink = [
     { transform: 'scaleX(1)' },
     { transform: 'scaleX(0)' },
     { transform: 'scaleX(1)' },
-]
-
-const dropdown = [
-    { top: '-70px' },
-    { top: '0px' },
-    { top: '-70px' },
 ]
