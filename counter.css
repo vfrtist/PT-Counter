@@ -1,8 +1,33 @@
+:root {
+    --background: #d7ebee;
+    --foreground: #f7fbff;
+    --button: #27affd;
+    --active: #2760fd;
+    --disabled: #27aefd85;
+    --disabled-font: #ffffffad;
+    --shadow: #7c8e913b;
+    --font-color-1: black;
+    --font-color-2: white;
+}
+
+[data-theme="dark"] {
+    --background: #36484b;
+    --foreground: #2b6bad;
+    --button: #27affd;
+    --active: #2760fd;
+    --disabled: #27aefd85;
+    --disabled-font: #ffffffad;
+    --shadow: #1b25274f;
+    --font-color-1: white;
+    --font-color-2: white;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: #d7ebee;
+    background: var(--background);
     font-family: 'Tsukimi Rounded', sans-serif;
+    color: var(--font-color-1)
 }
 
 /* -------------------------- Header */
@@ -31,7 +56,7 @@ header div {
 header.out {
     top: 0;
     border: 0px;
-    transition: top .5s .3s;
+    transition: top .5s .18s;
 }
 
 /* -------------------------- top half */
@@ -100,13 +125,24 @@ h2 {
 }
 
 .bubble {
-    background: #f7fbff;
-    box-shadow: 0px 6px 18px #7c8e913b;
+    background: var(--foreground);
+    box-shadow: 0px 6px 18px var(--shadow);
     box-sizing: border-box;
 }
 
+.top button {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 6px;
+    margin: 0;
+    border-radius: 50%;
+}
+
 .firework {
-    fill: #27affd;
+    fill: var(--button);
     position: absolute;
     width: 71px;
     top: -28px;
@@ -153,6 +189,14 @@ h2 {
 }
 
 button {
+    background: var(--button);
+    color: var(--font-color-2);
+    fill: var(--font-color-2);
+    border: none;
+    box-shadow: 0px 6px 18px var(--shadow);
+}
+
+.bottom button {
     font-family: 'Varela Round', sans-serif;
     display: block;
     box-sizing: border-box;
@@ -160,20 +204,17 @@ button {
     padding: 8px;
     width: 200px;
     border-radius: 8px;
-    border: none;
-    background: #27affd;
-    color: white;
     font-size: 18px;
-    box-shadow: 0px 6px 18px #7c8e913b;
+    transition: background .1s, color .1s;
 }
 
-button:disabled {
-    background: #27aefd85;
-    color: #ffffffad;
+.bottom button:disabled {
+    background: var(--disabled);
+    color: var(--disabled-font);
     pointer-events: none;
 }
 
-button:active {
-    background: #2760fd;
+.bottom button:active {
+    background: var(--active);
     transform: translateY(2px);
 }
